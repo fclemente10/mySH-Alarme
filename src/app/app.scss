@@ -14,3 +14,104 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.getstart {
+  background-image: url('../assets/imgs/bg3.png');
+  // background: url('../../img/getstart.png');
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-color: transparent;
+}
+
+
+.toolbar-background {
+//  background-image: url('../assets/imgs/head.png');
+  background: #ffa500;
+}
+ion-item{
+  background-color: transparent;
+}
+ion-input{
+  //    width: auto;
+  font-size: 18px;
+  font-weight: bold;
+  color: #32db64;
+  background-color: transparent;
+
+}
+ion-label{
+  font-size: 18px;
+  font-weight: bold;
+  vertical-align: middle;
+  color: #ffa500;
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
+  background-color: transparent;
+}
+ion-grid{
+  height: 100%;
+  background-color: transparent;
+}
+
+ion-row{
+  //  display: flex;
+  //  align-items: center;
+  //  justify-content: center;
+  //  height: 100%;
+}
+
+
+.table {
+  display: table;
+  width: 100%;
+}
+.row {
+  display: table-row;
+}
+.cell {
+  display: table-cell;
+  width: fit-content;
+  height: 50px;
+  border-bottom: 1px solid black;
+  vertical-align: middle;
+  text-align: center;
+  color: #32db64;
+  padding: 0 15px 0 15px;
+
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+ion-select{
+  max-width: 100% !important;
+}
+ion-option{
+  font-size: 18px;
+  font-weight: bold;
+  color: #32db64;
+}
+ion-select{
+  font-size: 18px;
+  font-weight: bold;
+  color: #32db64;
+}
+ion-datetime{
+  font-size: 18px;
+  font-weight: bold;
+  color: #32db64;
+}
+hr {
+  border: 2px solid rgba(255, 165, 0, 0.19) !important;
+  height: 2px !important;
+  width: 100% !important;
+  background: rgba(68, 239, 6, 0.29) !important;
+  display: block !important;
+  font-size: 2em !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

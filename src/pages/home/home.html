@@ -1,14 +1,62 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-card-title text-center color="light" style="font-size: 40px"> Proyecto Alarma</ion-card-title>
+    <ion-buttons right>
+      <img side="right" end src="../../assets/imgs/logo_02.png" width="60px" height="85px"/>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+<ion-content padding class="getstart">
+  <ion-grid style="background-color: transparent">
+    <ion-item style="background-color: transparent"> <h2> ¡Hola, {{correoElectronico}}!</h2></ion-item>
+    <ion-item style="background-color: transparent">Fecha y Hora de deteccion</ion-item>
+    <div class="row" *ngFor="let date of dateArray" style="background-color: transparent">
+      <!--ion-datetime displayFormat="MMM DD, h:mm A" [(ngModel)]="myDate">{{date.date}}</ion-datetime-->
+      <ion-item style="background-color: transparent" >{{date.date}}</ion-item>
+    </div>
+    <button *ngIf="moved" ion-button color="primary" full>Detectado Movimiento</button>
+    <ion-item style="background-color: transparent">
+      <button *ngIf="!enchufado" ion-button color="secondary" (click)="gyrascope()" full>Enchufar</button>
+      <button *ngIf="enchufado" ion-button color="danger" (click)="btnQuitarGyro()" full>Quitar</button>
+    </ion-item>
+    </ion-grid>
+  <p></p>
+  <!--ion-item>
+    <ion-label>X orientation</ion-label>
+    <ion-input type="text" [(ngModel)]="xOrient"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Y orientation</ion-label>
+    <ion-input type="text" [(ngModel)]="yOrient"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Z orientation</ion-label>
+    <ion-input type="text" [(ngModel)]="zOrient"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Time Stamp</ion-label>
+    <ion-input type="text" [(ngModel)]="timestamp"></ion-input>
+  </ion-item-->
+
+
+
+  <!--ion-item>
+    <ion-label>Acceleration X</ion-label>
+    <ion-input type="text" [(ngModel)]="accX"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Acceleration Y</ion-label>
+    <ion-input type="text" [(ngModel)]="accY"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Acceleration Z</ion-label>
+    <ion-input type="text" [(ngModel)]="accZ"></ion-input>
+  </ion-item>
+  <button ion-button (click)="Accelerometer()" full>click</button-->
+
 </ion-content>
+<ion-footer>
+  <button ion-button color="danger" (click)="btnBorrar()" full>Borrar Alarmas</button>
+  <!--button ion-button color="danger" (click)="btnEnviaWS()" full>Envia WS</button-->
+</ion-footer>
